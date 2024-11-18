@@ -738,14 +738,14 @@ class _LoginCardState extends State<_LoginCard> with TickerProviderStateMixin {
             onExpandCompleted: () => _postSwitchAuthController.forward(),
             child: Column(
               children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 10.0),
-                  child: _buildConfirmPasswordField(
-                    textFieldWidth,
-                    messages,
-                    auth,
-                  ),
-                ),
+                // Padding(
+                //   padding: const EdgeInsets.symmetric(vertical: 10.0),
+                //   child: _buildConfirmPasswordField(
+                //     textFieldWidth,
+                //     messages,
+                //     auth,
+                //   ),
+                // ),
                 for (final e in auth.termsOfService)
                   TermCheckbox(
                     termOfService: e,

@@ -255,7 +255,8 @@ class _AnimatedTextFormFieldState extends State<AnimatedTextFormField> {
   InputDecoration _getInputDecoration(ThemeData theme) {
     return InputDecoration(
       labelText: widget.labelText,
-      prefixIcon: _buildInertiaAnimation(widget.prefixIcon),
+      contentPadding: const EdgeInsets.only(left: 16),
+      // prefixIcon: _buildInertiaAnimation(widget.prefixIcon),
       suffixIcon: _buildInertiaAnimation(
         widget.loadingController != null
             ? FadeTransition(
@@ -501,7 +502,7 @@ class _AnimatedPasswordTextFormFieldState
       enabled: widget.enabled,
       autofillHints: widget.autofillHints,
       labelText: widget.labelText,
-      prefixIcon: const Icon(FontAwesomeIcons.lock, size: 20),
+      // prefixIcon: const Icon(FontAwesomeIcons.lock, size: 20),
       suffixIcon: GestureDetector(
         onTap: () => setState(() => _obscureText = !_obscureText),
         dragStartBehavior: DragStartBehavior.down,
